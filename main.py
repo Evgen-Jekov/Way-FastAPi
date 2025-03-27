@@ -2,6 +2,6 @@ from fastapi import FastAPI
 
 app = FastAPI(debug=True)
 
-@app.get('/')
-async def root():
-    return {'msg' : 'Hello world'}
+@app.get('/task/{id}')
+async def root(id : int):
+    return {'msg' : id}

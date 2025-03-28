@@ -5,5 +5,5 @@ ai_route = APIRouter(prefix='/ai', tags=['AI'])
 
 @ai_route.get('/data-model/{model}')
 async def data_model(ai : AISchema = Depends()):
-    return {'model' : ai.model, 'version' : ai.version}
+    return ai
         
